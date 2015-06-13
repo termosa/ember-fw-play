@@ -1,1 +1,6 @@
+<div class="page-header">
+  <h2>{{model.name}} <button class="btn btn-danger btn-xs" {{ action 'onDelete' model }}>Delete</button></h2>
+</div>
+{{#if model.logo}} <img src={{model.logo}} style="max-width: 100%"> {{/if}}
+
 {{outlet}}

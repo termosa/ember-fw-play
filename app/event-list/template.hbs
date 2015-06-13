@@ -1,19 +1,16 @@
-<h2>Events</h2>
+<h3>Events <span class="not-badge">({{model.length}})</span></h3>
 
 <div class="row">
-  <div class="col-sm-9">
+  <div class="col-sm-4">
     {{#each model as |event index|}}
       <div class="media">
-        <div class="media-left">
-          <img src={{event.logo}} class="media-object" style="width: 100px;">
-        </div>
         <div class="media-body">
-          <h4 class="media-heading">{{#link-to 'event-list.event' event.id}} #{{index}} {{/link-to}} {{event.name}}</h4>
+          <h4 class="media-heading">{{#link-to 'event-list.event' event.id}} #{{index}}: {{event.name}} {{/link-to}}</h4>
         </div>
       </div>
     {{else}}
       <h2 class="mute">No content :(</h2>
     {{/each}}
   </div>
-  <div class="col-sm-3">{{outlet}}</div>
+  <div class="col-sm-8">{{outlet}}</div>
 </div>
