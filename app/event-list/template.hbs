@@ -1,3 +1,19 @@
 <h2>Events</h2>
 
-{{outlet}}
+<div class="row">
+  <div class="col-md-9">
+    {{#each model as |event index|}}
+      <div class="row" style="margin-top:15px">
+        <div class="col-xs-2">
+          <!--<img src={{event.logo}} style="max-width:100%; box-shadow: 0 0 1px darkgray">-->
+        </div>
+        <div class="col-xs-10">
+          <h4>{{#link-to 'event-list.event' event}}#{{index}}{{/link-to}} {{event.name}}</h4>
+        </div>
+      </div>
+    {{else}}
+      <h2 class="mute">No content :(</h2>
+    {{/each}}
+  </div>
+  <div class="col-md-3">{{outlet}}</div>
+</div>
