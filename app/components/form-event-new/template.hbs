@@ -1,0 +1,8 @@
+<form {{action 'newEvent' name logoUrl date on='submit' }}>
+  <p><label for="name">Name</label>{{input id="name" name="name" type="text" value=name }}</p>
+  <p><label for="logo">Logo</label>{{input id="logo" name="logoUrl" type="text" value=logoUrl }}</p>
+  <p><label for="date">Date</label>{{input id="date" name="date" type="date" value=date }}</p>
+  <p><input type="submit" value="Save" /></p>
+</form>
+
+{{yield}}
