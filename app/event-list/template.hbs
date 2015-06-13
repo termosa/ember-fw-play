@@ -5,10 +5,10 @@
     {{#each model as |event index|}}
       <div class="row" style="margin-top:15px">
         <div class="col-xs-2">
-          <!--<img src={{event.logo}} style="max-width:100%; box-shadow: 0 0 1px darkgray">-->
+          <img src={{event.logo}} style="max-width: 60%; max-height: 60%; margin: 0 auto; box-shadow: 0 0 1px darkgray">
         </div>
         <div class="col-xs-10">
-          <h4>{{#link-to 'event-list.event' event}}#{{index}}{{/link-to}} {{event.name}}</h4>
+          <h4>{{#link-to 'event-list.event' event.id}} #{{index}} {{/link-to}} {{event.name}}</h4>
         </div>
       </div>
     {{else}}
