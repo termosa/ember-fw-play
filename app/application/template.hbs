@@ -3,6 +3,7 @@
 
   <p>
     {{#if session.isAuthenticated}}
+      {{session.secure.twitter.username}}
       <button {{ action 'invalidateSession' }}>Logout</button>
     {{else}}
       <button {{ action 'authenticateSession' }}>Login</button>
